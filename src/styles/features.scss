@@ -1,0 +1,24 @@
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  background-color: #fff;
+
+  &__item {
+    padding: 55px 77px 37px 105px;
+  }
+
+  &__title {
+    margin-bottom: 28px;
+    font-size: 28px;
+    line-height: 33px;
+    letter-spacing: -0.03em;
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.03em;
+    color: rgba(34, 53, 111, 0.5);
+  }
+}

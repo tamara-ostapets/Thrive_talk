@@ -1,0 +1,23 @@
+.about {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  padding: 155px 0 75px 105px;
+
+  background-color: #fff;
+
+  &__title {
+    font-size: 16px;
+    line-height: 23px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  &__description {
+    width: 592px;
+
+    font-size: 24px;
+    line-height: 34px;
+    letter-spacing: 0.01em;
+  }
+}

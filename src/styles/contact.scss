@@ -1,0 +1,46 @@
+.contact {
+  padding: 103px 550px 45px 180px;
+
+  background-color: $primary-dark-color;
+  background-image: url("/images/contact.jpg");
+  background-repeat: no-repeat;
+  background-position: top right;
+
+  &__title {
+    margin-bottom: 230px;
+
+    font-size: 16px;
+    line-height: 12px;
+    letter-spacing: 0.1em;
+
+    color: #fff;
+  }
+
+  &__slogan {
+    margin-bottom: 75px;
+
+    font-size: 64px;
+    line-height: 94px;
+    letter-spacing: -0.01em;
+
+    color: #fff;
+  }
+
+  &__description {
+    margin-bottom: 75px;
+    font-size: 36px;
+    line-height: 53px;
+    letter-spacing: -0.01em;
+
+    color: #fff;
+  }
+
+  &__link {
+    @extend %link;
+
+    line-height: 23px;
+    letter-spacing: 0.1em;
+
+    color: #62d0df;
+  }
+}

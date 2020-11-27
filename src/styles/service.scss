@@ -1,0 +1,56 @@
+.service {
+  padding-bottom: 120px;
+  background-color: #fff;
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.06em;
+    color: rgba(34, 53, 111, 0.5);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0;
+
+    height: 360px;
+
+    list-style-type: none;
+
+    @media (max-width: 720px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__item {
+
+    @extend %card-style;
+
+    padding: 95px 52px 0 78px;
+
+    height: 360px;
+
+    &:hover {
+      @extend %card-hover-image;
+    }
+
+    &:nth-child(1) {
+      background-color: #ffe2de;
+    }
+
+    &:nth-child(2) {
+      background-color: #c4e769;
+    }
+
+    &:nth-child(3) {
+      background-color: #62d0df;
+    }
+
+    &:nth-child(4) {
+      background-color: #0052c1;
+    }
+  }
+}

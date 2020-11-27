@@ -1,0 +1,93 @@
+.intro {
+  z-index: 0;
+  padding-left: 179px;
+
+  display: flex;
+  justify-content: space-between;
+
+  background-color: #f4f9e2;
+
+  &__background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    width: 50%;
+  }
+
+  &__img {
+    position: relative;
+
+    height: 840px;
+    width: 100%;
+
+    background: url("/images/intro.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__shadow {
+    position: absolute;
+    z-index: -1;
+    bottom: 45px;
+    left: 20px;
+
+    height: 840px;
+    width: 100%;
+
+    background-image: url("/images/intro-blue.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__text {
+    z-index: 2;
+  }
+
+  &__logo {
+    margin-top: 187px;
+    margin-bottom: 37px;
+  }
+
+  &__title {
+    margin-bottom: 19px;
+
+    width: 484px;
+    height: 167px;
+
+    font-size: 48px;
+    line-height: 53px;
+    text-transform: uppercase;
+
+  }
+
+  &__description {
+    margin-bottom: 63px;
+
+    width: 469px;
+
+    font-size: 24px;
+    line-height: 42px;
+  }
+
+  &__link {
+    @extend %link;
+
+    margin-bottom: 75px;
+
+    height: 50px;
+    width: 150px;
+
+    line-height: 50px;
+    &--colored {
+      @extend %colored-link;
+    }
+
+    &--transparent {
+      @extend %transparent-link;
+    }
+  }
+}

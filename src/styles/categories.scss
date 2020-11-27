@@ -1,0 +1,73 @@
+.categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  @media (max-width: 1439px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 959px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  background-color: #fff;
+
+  &__item {
+    @extend %card-style;
+
+    padding: 126px 219px 0 104px;
+
+    height: 480px;
+    min-width: 480px;
+
+    &:hover {
+      @extend %card-hover-image;
+    }
+
+    &::before {
+      top: 135px;
+    }
+
+    &--physical {
+      background-color: #22356f;
+      &:hover {
+        background-image: url("/images/category/physical_health.jpg");
+      }
+    }
+
+    &--mental {
+      background-color: #0052c1;
+      &:hover {
+        background-image: url("/images/category/mental_health.jpg");
+      }
+    }
+
+    &--nutrition {
+      background-color: #f28e80;
+      &:hover {
+        background-image: url("/images/category/nutrition.jpg");
+      }
+    }
+
+    &--gymnastics {
+      background-color: #62d0df;
+      &:hover {
+        background-image: url("/images/category/gymnastics_kids.jpg");
+      }
+    }
+
+    &--crossfit {
+      background-color: #dee1ff;
+      &:hover {
+        background-image: url("/images/category/crossfit.jpg");
+      }
+    }
+
+    &--aerobics {
+      background-color: #8f00ff;
+      &:hover {
+        background-image: url("/images/category/aerobics.jpg");
+      }
+    }
+  }
+}
