@@ -1,10 +1,12 @@
 .contact {
-  padding: 103px 550px 45px 180px;
+  padding-top: 103px;
+  padding-bottom: 48px;
 
   background-color: $primary-dark-color;
   background-image: url("/images/contact.jpg");
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: right;
+  background-size: contain;
 
   &__title {
     margin-bottom: 230px;
@@ -27,6 +29,8 @@
   }
 
   &__description {
+    width: 50%;
+
     margin-bottom: 75px;
     font-size: 36px;
     line-height: 53px;
@@ -42,5 +46,9 @@
     letter-spacing: 0.1em;
 
     color: #62d0df;
+
+    &:hover {
+      color: $secondary-color;
+    }
   }
 }

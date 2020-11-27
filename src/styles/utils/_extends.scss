@@ -10,6 +10,8 @@
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
+
+  transition: 0.3s;
 }
 
 %colored-link {
@@ -63,4 +65,5 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  transition: 0.3s;
 }

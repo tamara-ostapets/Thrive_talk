@@ -1,12 +1,12 @@
 .features {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 240px);
+  justify-content: center;
+
+  padding-top: 85px;
 
   background-color: #fff;
-
-  &__item {
-    padding: 55px 77px 37px 105px;
-  }
 
   &__title {
     margin-bottom: 28px;
@@ -16,6 +16,8 @@
   }
 
   &__description {
+    width: 300px;
+
     font-size: 16px;
     line-height: 25px;
     letter-spacing: -0.03em;

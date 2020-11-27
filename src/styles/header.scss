@@ -1,7 +1,6 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 27px 180px;
   padding-top: 27px;
 
   height: 65px;
@@ -38,6 +37,10 @@
 
     text-decoration: none;
 
+    &:hover {
+      font-weight: bold;
+    }
+
     &:hover::after {
       content: "";
 
@@ -68,7 +71,7 @@
     z-index: 2;
 
     display: inline-block;
-    margin-top: -10px;    /*костыль */
+    margin-top: -15px;
 
     width: 150px;
     height: 50px;
@@ -81,5 +84,12 @@
 
     background-color: $primary-color;
     border-radius: 50px;
+
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $primary-dark-color;
+      color: $secondary-color;
+    }
   }
 }

@@ -1,3 +1,6 @@
+$catagory: "aerobics", "crossfit", "gymnastics", "mental", "nutrition",
+  "physical";
+
 .categories {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -30,44 +33,34 @@
 
     &--physical {
       background-color: #22356f;
-      &:hover {
-        background-image: url("/images/category/physical_health.jpg");
-      }
     }
 
     &--mental {
       background-color: #0052c1;
-      &:hover {
-        background-image: url("/images/category/mental_health.jpg");
-      }
     }
 
     &--nutrition {
       background-color: #f28e80;
-      &:hover {
-        background-image: url("/images/category/nutrition.jpg");
-      }
     }
 
     &--gymnastics {
       background-color: #62d0df;
-      &:hover {
-        background-image: url("/images/category/gymnastics_kids.jpg");
-      }
     }
 
     &--crossfit {
       background-color: #dee1ff;
-      &:hover {
-        background-image: url("/images/category/crossfit.jpg");
-      }
     }
 
     &--aerobics {
       background-color: #8f00ff;
-      &:hover {
-        background-image: url("/images/category/aerobics.jpg");
-      }
+    }
+  }
+}
+
+@each $item in $catagory {
+  .categories__item--#{$item} {
+    &:hover {
+      background-image: url("/images/category/#{$item}.jpg");
     }
   }
 }

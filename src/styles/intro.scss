@@ -1,6 +1,5 @@
 .intro {
   z-index: 0;
-  padding-left: 179px;
 
   display: flex;
   justify-content: space-between;
@@ -17,10 +16,10 @@
   }
 
   &__img {
+
     position: relative;
 
     height: 840px;
-    width: 100%;
 
     background: url("/images/intro.png");
     background-size: cover;
@@ -29,13 +28,12 @@
   }
 
   &__shadow {
-    position: absolute;
+    position: relative;
+
     z-index: -1;
     bottom: 45px;
-    left: 20px;
 
     height: 840px;
-    width: 100%;
 
     background-image: url("/images/intro-blue.svg");
     background-size: cover;
@@ -82,12 +80,22 @@
     width: 150px;
 
     line-height: 50px;
+
     &--colored {
       @extend %colored-link;
+
+      &:hover {
+        background-color: $primary-dark-color;
+        color: $secondary-color;
+      }
     }
 
     &--transparent {
       @extend %transparent-link;
+      &:hover {
+        color: $primary-dark-color;
+
+      }
     }
   }
 }
