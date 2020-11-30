@@ -8,7 +8,7 @@
   </head>
   <body>
     <header class="header container">
-      <a href="" class="header__logo-lin">
+      <a href="" class="header__logo-link">
         <img
           src="images/logo.svg"
           alt="ThriveTalk logo"
@@ -17,29 +17,60 @@
       </a>
 
       <nav class="header__nav">
-        <!-- Add #links to the corresponding section -->
+
+
+        <input
+          id="nav-toggler"
+          type="checkbox"
+          class="header__toggler"
+        >
+
+        <label
+          for="nav-toggler"
+          class="header__toggler-label">
+        </label>
 
         <ul class="header__list">
           <li class="header__list-item">
-            <a href="#" class="header__link">Home</a>
+            <a
+              href="#"
+              class="header__link">
+              Home
+            </a>
           </li>
 
           <li class="header__list-item">
-            <a href="#about" class="header__link">About</a>
+            <a
+              href="#about"
+              class="header__link">
+              About
+            </a>
           </li>
 
           <li class="header__list-item">
-            <a href="#service" class="header__link">Service</a>
+            <a
+              href="#service"
+              class="header__link">
+              Service
+            </a>
           </li>
 
           <li class="header__list-item">
-            <a href="#categories" class="header__link">Blog</a>
+            <a
+              href="#categories"
+              class="header__link">
+              Blog
+            </a>
           </li>
 
         </ul>
       </nav>
 
-      <a href="#contact" class="header__contact">Contact us</a>
+      <a
+        href="#contact"
+        class="header__contact">
+        Contact us
+      </a>
     </header>
 
     <main class="content">
@@ -94,10 +125,10 @@
       <section class="content__service service" id="service">
         <h5 class="service__title">We can help you with</h5>
         <ul class="service__list">
-          <li class="service__item">Weight lifting</li>
-          <li class="service__item">Running & spinning</li>
-          <li class="service__item">Pumping iron</li>
-          <li class="service__item">pumping iron</li>
+          <li class="service__item service__item--lifting">Weight lifting</li>
+          <li class="service__item service__item--running">Running & spinning</li>
+          <li class="service__item service__item--pumping">Pumping iron</li>
+          <li class="service__item service__item--pumping-iron">pumping iron</li>
         </ul>
       </section>
 
@@ -137,15 +168,19 @@
         </div>
       </section>
 
-      <section class="content__also also">
-        <h5 class="also__title">You should also know</h5>
+      <section class="content__also also container">
+        <div class="also__image"></div>
+        <div class="also__text">
+          <h5 class="also__title">You should also know</h5>
 
-        <p class="also__description">MDD affects more than 16.1 million American adults, or about 6.7%of the U.S. population age 18 and older in a given year. We at ThriveTalk can help you.</p>
+          <p class="also__description">MDD affects more than 16.1 million American adults, or about 6.7%of the U.S. population age 18 and older in a given year. We at ThriveTalk can help you.</p>
 
-        <a href="" class="also__link also__link--transparent">Get help now</a>
+          <a href="" class="also__link also__link--transparent">Get help now</a>
+        </div>
+
       </section>
 
-      <section class="content__contact contact container">
+      <section class="content__contact contact container" id="contact">
         <h5 class="contact__title">Contact us</h5>
         <h3 class="contact__slogan">Ready. Set. Smile</h3>
 
@@ -156,40 +191,53 @@
     </main>
 
     <footer class="footer">
-      <div class="footer__contact" id="contact">
 
-        <div class="footer__item">
-          <h5 class="footer__title">SOME INFO</h5>
-          <p class="footer__description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.</p>
-        </div>
+      <div class="footer__top">
+        <div class="footer__image"></div>
 
-        <div class="footer__item">
-          <h5 class="footer__title">ENFOLD HEALTH</h5>
-          <p class="footer__description">Main Street 1, Olcott
-            <br>
-            Buffalo, United States
-            <br>
-            <br>
-            <a href="tel:+555283784333">+555 283 784 333</a>
-            <br>
-            <a href="mailto:office@enfold-health.com">office@enfold-health.com</a>
-          </p>
-        </div>
+        <div class="footer__contact">
 
-        <div class="footer__item">
-          <h5 class="footer__title">OFFICE HOURS</h5>
-          <p class="footer__description">Mo-Fr: 8:00-19:00
-            <br>
-            Sa: 8:00-14:00
-            <br>
-            Su: closed
-          </p>
+          <div class="footer__item">
+            <h5 class="footer__title">SOME INFO</h5>
+            <p class="footer__description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.</p>
+          </div>
+
+          <div class="footer__item">
+            <h5 class="footer__title">ENFOLD HEALTH</h5>
+            <p class="footer__description">Main Street 1, Olcott
+              <br>
+              Buffalo, United States
+              <br>
+              <br>
+              <a
+                class="footer__link"
+                href="tel:+555283784333">
+                +555 283 784 333
+              </a>
+              <br>
+              <a
+                class="footer__link"
+                href="mailto:office@enfold-health.com">
+                office@enfold-health.com
+              </a>
+            </p>
+          </div>
+
+          <div class="footer__item">
+            <h5 class="footer__title">OFFICE HOURS</h5>
+            <p class="footer__description">Mo-Fr: 8:00-19:00
+              <br>
+              Sa: 8:00-14:00
+              <br>
+              Su: closed
+            </p>
+          </div>
         </div>
       </div>
 
-      <p class="footer__copyright">
+      <div class="footer__copyright">
         Copyright - ThriveTalk  2017
-      </p>
+      </div>
     </footer>
   </body>
 </html>

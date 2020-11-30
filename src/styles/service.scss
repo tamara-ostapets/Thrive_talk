@@ -1,9 +1,11 @@
 .service {
   padding-bottom: 120px;
+
   background-color: #fff;
 
   &__title {
-    padding-bottom: 16px;
+    padding-bottom: 24px;
+
     text-align: center;
     text-transform: uppercase;
     font-size: 16px;
@@ -17,11 +19,9 @@
     grid-template-columns: repeat(4, 1fr);
     padding: 0;
 
-    height: 360px;
-
     list-style-type: none;
 
-    @media (max-width: 720px) {
+    @media (max-width: $mobile) {
       grid-template-columns: repeat(2, 1fr);
     }
   }
@@ -34,24 +34,60 @@
 
     height: 360px;
 
+    transition: 0.3s;
+
+    @media (max-width: $mobile) {
+      padding-left: 44px;
+      padding-right: 0;
+
+      height: 280px;
+
+      font-size: 18px;
+      line-height: 18px;
+
+      &::before {
+        top: 97px;
+        left: 24px
+      }
+    }
+
     &:hover {
-      @extend %card-hover-image;
+      cursor: pointer;
+
+      position: relative;
+
+      z-index: 1;
+
+
+
     }
 
-    &:nth-child(1) {
+    &--lifting {
       background-color: #ffe2de;
+      &:hover {
+        background-color: #FF8170;
+      }
     }
 
-    &:nth-child(2) {
+    &--running {
       background-color: #c4e769;
+      &:hover {
+        background-color: #86AF1D;
+      }
     }
 
-    &:nth-child(3) {
+    &--pumping {
       background-color: #62d0df;
+      &:hover {
+        background-color: #1F8A98;
+      }
     }
 
-    &:nth-child(4) {
+    &--pumping-iron {
       background-color: #0052c1;
+      &:hover {
+        background-color: #00193D;
+      }
     }
   }
 }

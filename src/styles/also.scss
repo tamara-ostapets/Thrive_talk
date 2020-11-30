@@ -1,10 +1,45 @@
 .also {
+  position: relative;
+  z-index: 0;
+  display: flex;
   padding-top: 103px;
-  padding-left: 640px;
+  padding-left: 0;
 
   background-color: #fff;
-  background-image: url("/images/also.jpg");
-  background-repeat: no-repeat;
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  &__image {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+
+    background-image: url("/images/also.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (max-width: $tablet) {
+      height: 800px;
+    }
+  }
+
+  &__text {
+    z-index: 2;
+    margin-left: 50px;
+
+    background-color: transparent;
+
+
+    @media (max-width: $tablet) {
+      padding: 100px 30px 100px 30px;
+    }
+  }
+
   &__title {
     margin-bottom: 225px;
 
@@ -17,10 +52,22 @@
   &__description {
     margin-bottom: 150px;
 
-    width: 675px;
     font-size: 36px;
     line-height: 53px;
     letter-spacing: -0.01em;
+
+    @media (max-width: $tablet) {
+      margin-left: 0;
+
+      width: 100%;
+    }
+
+    @media (max-width: $mobile) {
+      margin-left: -15px;
+
+      font-size: 24px;
+      line-height: 48px;
+    }
   }
 
   &__link {

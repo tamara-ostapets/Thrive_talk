@@ -21,10 +21,21 @@ $catagory: "aerobics", "crossfit", "gymnastics", "mental", "nutrition",
     padding: 126px 219px 0 104px;
 
     height: 480px;
-    min-width: 480px;
+
+    @media (max-width: $tablet) {
+      padding-right: 100px;
+    }
+
+    @media (max-width: $mobile) {
+      padding-right: 40px;
+    }
 
     &:hover {
-      @extend %card-hover-image;
+      cursor: pointer;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: 0.3s;
     }
 
     &::before {
