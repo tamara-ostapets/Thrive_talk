@@ -5,17 +5,27 @@
   gap: 60px;
   justify-content: center;
 
-  padding-top: 85px;
-  padding-bottom: 85px;
+  padding: 85px $padding 0;
 
   background-color: #fff;
 
   @media (max-width: $tablet) {
     grid-template-columns: repeat(2, 1fr);
+
+    padding: 85px $mid-padding;
+  }
+
+  @media (max-width: $mobile) {
+    grid-template-columns: repeat(1, 298px);
+    grid-template-rows: repeat(6, 1fr);
+
+    padding: 85px 0;
+    margin: 0 auto;
   }
 
   &__item {
     display: grid;
+    max-width: 298px;
 
     @media (max-width: $tablet) {
       grid-template-rows: 1fr 2fr;

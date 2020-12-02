@@ -21,8 +21,12 @@
 
     list-style-type: none;
 
-    @media (max-width: $mobile) {
+    @media (max-width: 1439px) {
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 
@@ -36,57 +40,39 @@
 
     transition: 0.3s;
 
-    @media (max-width: $mobile) {
-      padding-left: 44px;
-      padding-right: 0;
-
-      height: 280px;
-
-      font-size: 18px;
-      line-height: 18px;
-
-      &::before {
-        top: 97px;
-        left: 24px
-      }
-    }
-
     &:hover {
       cursor: pointer;
 
       position: relative;
 
       z-index: 1;
-
-
-
     }
 
     &--lifting {
       background-color: #ffe2de;
       &:hover {
-        background-color: #FF8170;
+        background-color: #ff8170;
       }
     }
 
     &--running {
       background-color: #c4e769;
       &:hover {
-        background-color: #86AF1D;
+        background-color: #86af1d;
       }
     }
 
     &--pumping {
       background-color: #62d0df;
       &:hover {
-        background-color: #1F8A98;
+        background-color: #1f8a98;
       }
     }
 
     &--pumping-iron {
       background-color: #0052c1;
       &:hover {
-        background-color: #00193D;
+        background-color: #00193d;
       }
     }
   }

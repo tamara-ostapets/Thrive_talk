@@ -1,6 +1,7 @@
 .contact {
   padding-top: 103px;
   padding-bottom: 48px;
+  padding-left: $padding;
 
   background-color: $primary-dark-color;
 
@@ -9,9 +10,13 @@
   background-position: right;
   background-size: contain;
 
-  @media (max-width: $tablet) {
-    padding-left: 30px;
+  @media (max-width: 1175px) {
+    padding-left: $mid-padding;
     background-image: none;
+  }
+
+  @media (max-width: $mobile) {
+    padding-left: $small-padding;
   }
 
   &__title {

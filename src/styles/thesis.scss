@@ -1,6 +1,5 @@
 .thesis {
-  padding-top: 150px;
-  padding-bottom: 95px;
+  padding: 150px 0 95px 178px;
 
   color: #fff;
 
@@ -11,7 +10,13 @@
   background-color: $primary-color;
 
   @media (max-width: $tablet) {
+    padding-left: $mid-padding;
+    padding-right: $mid-padding;
     background-image: none;
+  }
+
+  @media (max-width: $mobile) {
+    padding-left: $small-padding;
   }
 
   &__title {
@@ -24,15 +29,9 @@
 
   &__description {
 
-    width: 555px;
+    max-width: 555px;
 
     font-size: 24px;
     line-height: 35px;
-
-    @media (max-width: $tablet) {
-      width: 100%;
-
-      font-size: 24px;
-    }
   }
 }

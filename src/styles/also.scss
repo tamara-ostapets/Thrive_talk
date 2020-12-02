@@ -1,72 +1,73 @@
 .also {
-  position: relative;
-  z-index: 0;
   display: flex;
-  padding-top: 103px;
-  padding-left: 0;
+
+  padding: 103px $padding 0 0;
 
   background-color: #fff;
 
-  @media (max-width: $tablet) {
+  @media (max-width: $mobile) {
     flex-direction: column;
-    padding: 0;
+    padding-right: 0;
+
   }
 
   &__image {
-    position: relative;
-    z-index: 1;
-
-    width: 100%;
+    width: 1500px;
 
     background-image: url("/images/also.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
-    @media (max-width: $tablet) {
-      height: 800px;
+    @media (max-width: $mobile) {
+      width: 100%;
+      height: $mobile-image-height;
     }
   }
 
   &__text {
-    z-index: 2;
-    margin-left: 50px;
+    margin-left: 106px;
+    margin-top: 103px;
 
-    background-color: transparent;
+    background-color: #fff;
 
-
-    @media (max-width: $tablet) {
-      padding: 100px 30px 100px 30px;
+    @media (max-width: $mobile) {
+      margin-left: $small-padding;
+      padding-right: $small-padding;
     }
   }
 
   &__title {
     margin-bottom: 225px;
 
-    text-transform: uppercase;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 12px;
     letter-spacing: 0.06em;
+    color: $primary-dark-color;
+    text-transform: uppercase;
   }
 
   &__description {
-    margin-bottom: 150px;
+    margin-bottom: 152px;
 
     font-size: 36px;
     line-height: 53px;
     letter-spacing: -0.01em;
+    color: $primary-dark-color;
+  }
 
-    @media (max-width: $tablet) {
-      margin-left: 0;
+  &__thrive {
+    text-decoration: none;
+    color: $primary-color;
 
-      width: 100%;
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
     }
 
-    @media (max-width: $mobile) {
-      margin-left: -15px;
-
-      font-size: 24px;
-      line-height: 48px;
+    &:visited {
+      text-decoration: none;
+      color: $primary-dark-color;
     }
   }
 
@@ -75,12 +76,5 @@
 
     @extend %link;
     @extend %transparent-link;
-
-    line-height: 23px;
-    letter-spacing: 0.1em;
-
-    &:hover {
-      color: $primary-dark-color;
-    }
   }
 }

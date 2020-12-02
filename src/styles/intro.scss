@@ -1,65 +1,25 @@
 .intro {
   z-index: 0;
-
-  padding-top: 187px;
-
   display: flex;
   justify-content: space-between;
 
+  padding: 187px $padding 0 $padding;
+
   background-color: #f4f9e2;
 
-  &__background {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
-
-    width: 50%;
-
-    @media (max-width: $tablet) {
-      width: 100%;
-    }
+  @media (max-width: $tablet) {
+    padding-right: $mid-padding;
+    padding-left: $mid-padding;
   }
 
-  &__img {
-
-    position: relative;
-
-    height: 840px;
-
-    background: url("/images/intro.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    @media (max-width: $mobile) {
-      background-position: right;
-    }
+  @media (max-width: $mobile) {
+    padding-right: $small-padding;
+    padding-left: $small-padding;
   }
-
-  &__shadow {
-    position: relative;
-
-    z-index: -1;
-    bottom: 45px;
-
-    height: 840px;
-
-    background-image: url("/images/intro-blue.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    @media (max-width: $mobile) {
-      background-position: right;
-    }
-  }
-
   &__text {
     z-index: 2;
 
-    width: 469px;
-
+    max-width: 484px;
 
     @media (max-width: $mobile) {
       width: 100%;
@@ -120,6 +80,66 @@
         color: $primary-dark-color;
 
       }
+    }
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+
+    width: 50%;
+    height: 704px;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
+
+    @media (min-width: $desktop) {
+      height: 704px;
+    }
+  }
+
+  &__img {
+
+    position: relative;
+
+    height: 704px;
+
+    background: url("/images/intro.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (max-width: $mobile) {
+      background-position: right;
+    }
+
+    @media (min-width: $desktop) {
+      height: 704px;
+    }
+  }
+
+  &__shadow {
+    position: relative;
+
+    z-index: -1;
+    bottom: 45px;
+
+    height: 704px;
+
+    background-image: url("/images/intro-blue.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (max-width: $mobile) {
+      background-position: right;
+    }
+
+    @media (min-width: $desktop) {
+      height: 704px;
     }
   }
 }
