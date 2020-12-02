@@ -22,6 +22,8 @@ $catagory: "aerobics", "crossfit", "gymnastics", "mental", "nutrition",
 
     height: 480px;
 
+    transition: 0.3s;
+
     @media (max-width: $tablet) {
       padding-right: 100px;
     }
@@ -35,7 +37,6 @@ $catagory: "aerobics", "crossfit", "gymnastics", "mental", "nutrition",
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      transition: 0.3s;
     }
 
     &::before {

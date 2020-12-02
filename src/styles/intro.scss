@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
 
-  padding: 187px $padding 0 $padding;
+  padding: 187px 0 0 $padding;
 
   background-color: #f4f9e2;
 
@@ -57,6 +57,8 @@
   }
 
   &__link {
+    position: relative;
+    z-index: 2;
     @extend %link;
     margin-bottom: 75px;
 
@@ -94,6 +96,7 @@
 
     @media (max-width: $tablet) {
       width: 100%;
+
     }
 
     @media (min-width: $desktop) {
@@ -114,10 +117,12 @@
 
     @media (max-width: $mobile) {
       background-position: right;
+
     }
 
     @media (min-width: $desktop) {
       height: 704px;
+
     }
   }
 
@@ -140,6 +145,16 @@
 
     @media (min-width: $desktop) {
       height: 704px;
+    }
+  }
+
+  &__white {
+    width: 25%;
+
+    background-color: #fff;
+
+    @media (max-width: $tablet) {
+      display: none;
     }
   }
 }

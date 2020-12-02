@@ -34,10 +34,15 @@
 
     color: rgba(34, 53, 111, 0.5);
 
+    @media (max-width: 1190px) {
+
+      padding-right: $small-padding;
+      padding-left: $small-padding;
+
+    }
+
     @media (max-width: $tablet) {
       flex-direction: column;
-
-      padding: $mid-padding;
 
     }
 
@@ -74,6 +79,8 @@
   }
 
   &__link {
+    color: $primary-dark-color;
+    text-decoration: none;
     &:hover {
       cursor: pointer;
       color: $primary-color;

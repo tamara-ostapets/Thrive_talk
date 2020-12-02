@@ -59,16 +59,6 @@
   &__thrive {
     text-decoration: none;
     color: $primary-color;
-
-    &:hover {
-      cursor: pointer;
-      text-decoration: underline;
-    }
-
-    &:visited {
-      text-decoration: none;
-      color: $primary-dark-color;
-    }
   }
 
   &__link {
@@ -76,5 +66,9 @@
 
     @extend %link;
     @extend %transparent-link;
+
+    &:hover {
+      color: $primary-dark-color;
+    }
   }
 }
